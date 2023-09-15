@@ -21,3 +21,8 @@ mybatis-plus:
     auto-mapping-behavior: full # ???????????
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+weixin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+  appid: wxe4668df4036a33e8
+  secret: 6f0d5038ab48e7dbc0aabfa6dc421938

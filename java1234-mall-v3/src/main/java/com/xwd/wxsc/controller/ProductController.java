@@ -54,13 +54,13 @@ public class ProductController {
      * @param id
      * @return
      */
-    @GetMapping("dtail")
+    @GetMapping("detail")
     public R detail(Integer id){
         Product product = productService.getById(id);
         List<ProductSwiperImage> productSwiperImageList = productSwiperImageService.list(new QueryWrapper<ProductSwiperImage>().eq("productId", product.getId()).orderByAsc("sort"));
         Map map = new HashMap<String,Object>();
         product.setProductSwiperImageList(productSwiperImageList);
-        map.put("massage",product);
+        map.put("message",product);
         return R.ok(map);
     }
 }
